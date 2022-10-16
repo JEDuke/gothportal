@@ -7,16 +7,22 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using gothportal.Models;
 using System.IO;
+using gothportal.Services;
 
 namespace gothportal.Controllers
 {
     public class AboutController : Controller
     {
-        private readonly ILogger<AboutController> _logger;
+        private readonly IGothApiService gothApiService;
 
-        public AboutController(ILogger<AboutController> logger)
+        private readonly ILogger<AboutController> logger;
+
+        public AboutController(
+            ILogger<AboutController> _logger,
+            IGothApiService _gothApiService)
         {
-            _logger = logger;
+            logger = _logger;
+            gothApiService = _gothApiService;
         }
 
         public IActionResult Index()
@@ -36,8 +42,10 @@ namespace gothportal.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Privacy(string keyId)
         {
+            var message = gothApiService.GetMessage(keyId);
+            ViewBag.message = message;
             return View();
         }
 
