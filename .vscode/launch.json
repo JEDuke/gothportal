@@ -19,7 +19,8 @@
       },
       "sourceFileMap": {
         "/Views": "${workspaceFolder}/web/Views"
-      }
+      },
+      "requireExactSource": false,
     },
     {
       "name": "Api .NET Function",
