@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "gothportal";
+}
+
+<div id="divMainBackground" class="container-fluid img-fluid mainBackground">
+
+</div>
+    
+<script src="/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+    $( document ).ready(function() {
+        setBackgroundImage();
+    });
+
+    function setBackgroundImage(){
+        var backgroundImageUrl = '@Url.Action("HomePage","About")';
+        $(document.getElementById("divMainBackground")).css("background-image", "url(" + backgroundImageUrl + ")");
+    }
+
+</script>
