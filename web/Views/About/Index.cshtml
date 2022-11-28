@@ -1,28 +1,18 @@
 ﻿@{
     ViewData["Title"] = "gothportal";
 }
-<div id="divMainBackground" class="container mainBackground">
+
+<div id="divMainBackground" class="container-fluid img-fluid mainBackground">
 
 </div>
-
+    
 <script src="/lib/jquery/dist/jquery.js"></script>
 <script type="text/javascript">
     $( document ).ready(function() {
-        @* var count = '@ViewBag.homepageImageCount';
-        // get a random number within range of number of files
-        var i = Math.floor(Math.random() * count) + 1; *@
-        // set the random backgound
-        setBackgroundImage(i)
-
-        // start counter to roll the background every x ms
-        @* var durationInMs = 20000;
-        setInterval(() => {
-            i < count ? i++ : i=1;
-            setBackgroundImage(i);
-        }, durationInMs); *@
+        setBackgroundImage();
     });
 
-    function setBackgroundImage(x){
+    function setBackgroundImage(){
         var backgroundImageUrl = '@Url.Action("HomePage","About")';
         $(document.getElementById("divMainBackground")).css("background-image", "url(" + backgroundImageUrl + ")");
     }

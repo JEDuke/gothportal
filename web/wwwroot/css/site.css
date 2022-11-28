@@ -63,8 +63,8 @@ body {
 }
 
 .mainBackground{
-  height: 85%;
-  background-position: center;
+  height: 100%;
+  background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }

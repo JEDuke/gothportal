@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using gothportal.Models;
 using System.IO;
 using gothportal.Services;
+using Azure.Storage.Blobs;
 
 namespace gothportal.Controllers
 {
@@ -27,8 +24,6 @@ namespace gothportal.Controllers
 
         public IActionResult Index()
         {
-            var path = "wwwroot/images/";
-            ViewBag.homepageImageCount = Directory.GetFiles(path, "homepage*.jpeg", SearchOption.AllDirectories).Length;
             return View();
         }
 
@@ -37,15 +32,25 @@ namespace gothportal.Controllers
             return View();
         }
 
-        public IActionResult Notes()
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult HomePage()
         {
-            return View();
+            string connString = "DefaultEndpointsProtocol=https;AccountName=gothstorage;AccountKey=2PVMTSyp1N3W98eGAGnp5D/5dRXlfrq8raJsPCSIoulHD+gA5nGAgrgvekriW2tcKAMnend4kS0n+AStaOmIpQ==;EndpointSuffix=core.windows.net";
+            Azure.Storage.Blobs.BlobClient blobClient = new BlobClient(
+                connString, 
+                "gothportal",
+                "homepage1.jpeg"
+            );
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                blobClient.DownloadTo(ms);
+                return File(ms.ToArray(), "image/jpeg");
+            }
         }
 
-        public IActionResult Privacy(string keyId)
+        public IActionResult Privacy()
         {
-            var message = gothApiService.GetMessage(keyId);
-            ViewBag.message = message;
             return View();
         }
 
