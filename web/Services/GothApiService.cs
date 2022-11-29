@@ -14,7 +14,7 @@ namespace gothportal.Services
         }
         public byte[] GetImage(string name)
         {
-            string connString = configuration["blobStorageConnectionString"];
+            string connString = configuration.GetConnectionString("blobStorageConnectionString");
             string blobContainerName = configuration["blobStorageContainerName"];
             Azure.Storage.Blobs.BlobClient blobClient = new BlobClient(
                 connectionString: connString,
