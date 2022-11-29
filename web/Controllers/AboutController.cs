@@ -35,18 +35,7 @@ namespace gothportal.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult HomePage()
         {
-            string connString = "DefaultEndpointsProtocol=https;AccountName=gothstorage;AccountKey=2PVMTSyp1N3W98eGAGnp5D/5dRXlfrq8raJsPCSIoulHD+gA5nGAgrgvekriW2tcKAMnend4kS0n+AStaOmIpQ==;EndpointSuffix=core.windows.net";
-            Azure.Storage.Blobs.BlobClient blobClient = new BlobClient(
-                connString, 
-                "gothportal",
-                "homepage1.jpeg"
-            );
-
-            using (MemoryStream ms = new MemoryStream())
-            {
-                blobClient.DownloadTo(ms);
-                return File(ms.ToArray(), "image/jpeg");
-            }
+            return File(gothApiService.GetImage("homepage1.jpeg"), "image/jpeg");
         }
 
         public IActionResult Privacy()
