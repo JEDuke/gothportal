@@ -2,20 +2,18 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using gothportal.Models;
-using System.IO;
 using gothportal.Services;
-using Azure.Storage.Blobs;
 
 namespace gothportal.Controllers
 {
-    public class AboutController : Controller
+    public class HomeController : Controller
     {
         private readonly IGothApiService gothApiService;
 
-        private readonly ILogger<AboutController> logger;
+        private readonly ILogger<HomeController> logger;
 
-        public AboutController(
-            ILogger<AboutController> _logger,
+        public HomeController(
+            ILogger<HomeController> _logger,
             IGothApiService _gothApiService)
         {
             logger = _logger;
@@ -33,20 +31,9 @@ namespace gothportal.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult HomePage()
+        public IActionResult Image(string name)
         {
-            string connString = "DefaultEndpointsProtocol=https;AccountName=gothstorage;AccountKey=2PVMTSyp1N3W98eGAGnp5D/5dRXlfrq8raJsPCSIoulHD+gA5nGAgrgvekriW2tcKAMnend4kS0n+AStaOmIpQ==;EndpointSuffix=core.windows.net";
-            Azure.Storage.Blobs.BlobClient blobClient = new BlobClient(
-                connString, 
-                "gothportal",
-                "homepage1.jpeg"
-            );
-
-            using (MemoryStream ms = new MemoryStream())
-            {
-                blobClient.DownloadTo(ms);
-                return File(ms.ToArray(), "image/jpeg");
-            }
+            return File(gothApiService.GetImage(name ?? "homepage1.jpeg"), "image/jpeg");
         }
 
         public IActionResult Privacy()
