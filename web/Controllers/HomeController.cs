@@ -3,21 +3,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using gothportal.Models;
 using gothportal.Services;
+using Microsoft.Extensions.Configuration;
 
 namespace gothportal.Controllers
 {
     public class HomeController : Controller
     {
         private readonly IGothApiService gothApiService;
-
+        private readonly IConfiguration configuration;
         private readonly ILogger<HomeController> logger;
 
         public HomeController(
             ILogger<HomeController> _logger,
-            IGothApiService _gothApiService)
+            IGothApiService _gothApiService,
+            IConfiguration _configuration)
         {
             logger = _logger;
             gothApiService = _gothApiService;
+            configuration = _configuration;
         }
 
         public IActionResult Index()
@@ -33,7 +36,8 @@ namespace gothportal.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Image(string name)
         {
-            return File(gothApiService.GetImage(name ?? "homepage1.jpeg"), "image/jpeg");
+            var defaultImageName = configuration["defaultImageName"];
+            return File(gothApiService.GetImage(name ?? defaultImageName), "image/jpeg");
         }
 
         public IActionResult Privacy()
