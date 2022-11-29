@@ -8,14 +8,14 @@ using Azure.Storage.Blobs;
 
 namespace gothportal.Controllers
 {
-    public class AboutController : Controller
+    public class HomeController : Controller
     {
         private readonly IGothApiService gothApiService;
 
-        private readonly ILogger<AboutController> logger;
+        private readonly ILogger<HomeController> logger;
 
-        public AboutController(
-            ILogger<AboutController> _logger,
+        public HomeController(
+            ILogger<HomeController> _logger,
             IGothApiService _gothApiService)
         {
             logger = _logger;
@@ -33,7 +33,7 @@ namespace gothportal.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult HomePage()
+        public IActionResult Image()
         {
             return File(gothApiService.GetImage("homepage1.jpeg"), "image/jpeg");
         }
