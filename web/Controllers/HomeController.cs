@@ -2,9 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using gothportal.Models;
-using System.IO;
 using gothportal.Services;
-using Azure.Storage.Blobs;
 
 namespace gothportal.Controllers
 {
@@ -33,9 +31,9 @@ namespace gothportal.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Image()
+        public IActionResult Image(string name)
         {
-            return File(gothApiService.GetImage("homepage1.jpeg"), "image/jpeg");
+            return File(gothApiService.GetImage(name ?? "homepage1.jpeg"), "image/jpeg");
         }
 
         public IActionResult Privacy()
