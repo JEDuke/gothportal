@@ -1,5 +1,4 @@
 using System.IO;
-using System.Net.Http;
 using Azure.Storage.Blobs;
 using Microsoft.Extensions.Configuration;
 
@@ -16,6 +15,7 @@ namespace gothportal.Services
         {
             string connString = configuration.GetConnectionString("blobStorageConnectionString");
             string blobContainerName = configuration["blobStorageContainerName"];
+
             Azure.Storage.Blobs.BlobClient blobClient = new BlobClient(
                 connectionString: connString,
                 blobContainerName: blobContainerName,

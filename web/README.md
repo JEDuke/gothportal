@@ -1,2 +1,0 @@
-# gothportal
-https://gothportal.com
