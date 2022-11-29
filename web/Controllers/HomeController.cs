@@ -28,11 +28,6 @@ namespace gothportal.Controllers
             return View();
         }
 
-        public IActionResult About()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Image(string name)
         {
