@@ -12,6 +12,9 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: ./web
 
     steps:
       - uses: actions/checkout@v2
@@ -21,7 +24,6 @@ jobs:
         with:
           dotnet-version: '6.0.x'
           include-prerelease: true
-          path: ~/web/
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
