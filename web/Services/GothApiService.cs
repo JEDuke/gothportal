@@ -1,5 +1,7 @@
 using System.IO;
+using System.Net.Http;
 using Azure.Storage.Blobs;
+using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Configuration;
 
 namespace gothportal.Services
@@ -13,20 +15,16 @@ namespace gothportal.Services
         }
         public byte[] GetImage(string name)
         {
-            string connString = configuration.GetConnectionString("blobStorageConnectionString");
-            string blobContainerName = configuration["blobStorageContainerName"];
-
-            Azure.Storage.Blobs.BlobClient blobClient = new BlobClient(
-                connectionString: connString,
-                blobContainerName: blobContainerName,
-                blobName: name
+            HttpClient _client = new HttpClient();
+            var gothApiUrl = configuration["gothApiUrl"];
+            var requestUri = QueryHelpers.AddQueryString(
+                uri: gothApiUrl,
+                name: "name",
+                value: name
             );
-
-            using (MemoryStream ms = new MemoryStream())
-            {
-                blobClient.DownloadTo(ms);
-                return ms.ToArray();
-            }
+            HttpRequestMessage newRequest = new HttpRequestMessage(HttpMethod.Get, requestUri);
+            HttpResponseMessage response = _client.SendAsync(newRequest).Result;
+            return response.Content.ReadAsAsync<byte[]>().Result;
         }
     }
 }
