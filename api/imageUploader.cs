@@ -9,34 +9,36 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Azure.Storage.Blobs;
+using Microsoft.Extensions.Configuration;
 
 namespace gothapi
 {
     public static class imageUploader
     {
         [FunctionName("imageUploader")]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("local.settings.json", optional: true, reloadOnChange: true)
+                .AddEnvironmentVariables()
+                .Build();
+
+            var blobConfig = new blobStorageConfig();
+            config.Bind(nameof(blobStorageConfig),blobConfig);
+            
+            log.LogInformation("C# imageUploader function processed a request.");
 
             string name = req.Query["name"];
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
+            var blobName = name ?? blobConfig.defaultBlobName;
 
-            string responseMessage = string.IsNullOrEmpty(name)
-                ? "Message from imageUploader: This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
-                : $"Message from imageUploader: Hello, sup {name}.";
-
-            //return new OkObjectResult(responseMessage);
-
-            string connString = "DefaultEndpointsProtocol=https;AccountName=gothstorage;AccountKey=2PVMTSyp1N3W98eGAGnp5D/5dRXlfrq8raJsPCSIoulHD+gA5nGAgrgvekriW2tcKAMnend4kS0n+AStaOmIpQ==;EndpointSuffix=core.windows.net";
             Azure.Storage.Blobs.BlobClient blobClient = new BlobClient(
-                connString, 
-                "gothportal",
-                name
+                blobConfig.connectionString, 
+                blobConfig.container,
+                blobName
             );
 
             using (MemoryStream ms = new MemoryStream())
