@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - api/**
   workflow_dispatch:
 
 env:
@@ -16,6 +18,9 @@ env:
 jobs:
   build-and-deploy:
     runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: ./api
     steps:
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@v2
