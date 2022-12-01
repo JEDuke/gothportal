@@ -16,7 +16,6 @@ namespace gothapi
     public static class imageUploader
     {
         [FunctionName("imageUploader")]
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             ILogger log)

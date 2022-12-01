@@ -28,7 +28,7 @@ namespace gothportal.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [ResponseCache(Duration = 900)]
         public IActionResult Image(string name)
         {
             var defaultImageName = configuration["defaultImageName"];
