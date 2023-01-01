@@ -1,0 +1,770 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD42503D29551D29002FBCDE /* gothportalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD42503C29551D29002FBCDE /* gothportalApp.swift */; };
+		FD42503F29551D29002FBCDE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD42503E29551D29002FBCDE /* ContentView.swift */; };
+		FD42504129551D2C002FBCDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD42504029551D2C002FBCDE /* Assets.xcassets */; };
+		FD42504429551D2C002FBCDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD42504329551D2C002FBCDE /* Preview Assets.xcassets */; };
+		FD42504E29551D2C002FBCDE /* gothportalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD42504D29551D2C002FBCDE /* gothportalTests.swift */; };
+		FD42505829551D2C002FBCDE /* gothportalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD42505729551D2C002FBCDE /* gothportalUITests.swift */; };
+		FD42505A29551D2C002FBCDE /* gothportalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD42505929551D2C002FBCDE /* gothportalUITestsLaunchTests.swift */; };
+		FD425067295520A1002FBCDE /* images.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD425066295520A1002FBCDE /* images.swift */; };
+		FD42506F295530B1002FBCDE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD42506E295530B1002FBCDE /* WidgetKit.framework */; };
+		FD425071295530B1002FBCDE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD425070295530B1002FBCDE /* SwiftUI.framework */; };
+		FD425074295530B2002FBCDE /* GothPortal_WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD425073295530B2002FBCDE /* GothPortal_WidgetBundle.swift */; };
+		FD425076295530B2002FBCDE /* GothPortal_WidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD425075295530B2002FBCDE /* GothPortal_WidgetLiveActivity.swift */; };
+		FD425078295530B2002FBCDE /* GothPortal_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD425077295530B2002FBCDE /* GothPortal_Widget.swift */; };
+		FD42507A295530BB002FBCDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD425079295530BB002FBCDE /* Assets.xcassets */; };
+		FD42507E295530BC002FBCDE /* GothPortal WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FD42506C295530B1002FBCDE /* GothPortal WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FD42508429553167002FBCDE /* images.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD425066295520A1002FBCDE /* images.swift */; };
+		FD425086295531CB002FBCDE /* gothPortalWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD425085295531CB002FBCDE /* gothPortalWidgetView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD42504A29551D2C002FBCDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD42503129551D29002FBCDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD42503829551D29002FBCDE;
+			remoteInfo = gothportal;
+		};
+		FD42505429551D2C002FBCDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD42503129551D29002FBCDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD42503829551D29002FBCDE;
+			remoteInfo = gothportal;
+		};
+		FD42507C295530BB002FBCDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD42503129551D29002FBCDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD42506B295530B1002FBCDE;
+			remoteInfo = "GothPortal WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FD425082295530BC002FBCDE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FD42507E295530BC002FBCDE /* GothPortal WidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FD42503929551D29002FBCDE /* gothportal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gothportal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD42503C29551D29002FBCDE /* gothportalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gothportalApp.swift; sourceTree = "<group>"; };
+		FD42503E29551D29002FBCDE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FD42504029551D2C002FBCDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD42504329551D2C002FBCDE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FD42504929551D2C002FBCDE /* gothportalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gothportalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD42504D29551D2C002FBCDE /* gothportalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gothportalTests.swift; sourceTree = "<group>"; };
+		FD42505329551D2C002FBCDE /* gothportalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gothportalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD42505729551D2C002FBCDE /* gothportalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gothportalUITests.swift; sourceTree = "<group>"; };
+		FD42505929551D2C002FBCDE /* gothportalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gothportalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FD425066295520A1002FBCDE /* images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = images.swift; sourceTree = "<group>"; };
+		FD42506C295530B1002FBCDE /* GothPortal WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "GothPortal WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD42506E295530B1002FBCDE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		FD425070295530B1002FBCDE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		FD425073295530B2002FBCDE /* GothPortal_WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GothPortal_WidgetBundle.swift; sourceTree = "<group>"; };
+		FD425075295530B2002FBCDE /* GothPortal_WidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GothPortal_WidgetLiveActivity.swift; sourceTree = "<group>"; };
+		FD425077295530B2002FBCDE /* GothPortal_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GothPortal_Widget.swift; sourceTree = "<group>"; };
+		FD425079295530BB002FBCDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD42507B295530BB002FBCDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD425085295531CB002FBCDE /* gothPortalWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gothPortalWidgetView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD42503629551D29002FBCDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD42504629551D2C002FBCDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD42505029551D2C002FBCDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD425069295530B1002FBCDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD425071295530B1002FBCDE /* SwiftUI.framework in Frameworks */,
+				FD42506F295530B1002FBCDE /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD42503029551D28002FBCDE = {
+			isa = PBXGroup;
+			children = (
+				FD42503B29551D29002FBCDE /* gothportal */,
+				FD42504C29551D2C002FBCDE /* gothportalTests */,
+				FD42505629551D2C002FBCDE /* gothportalUITests */,
+				FD425072295530B2002FBCDE /* GothPortal Widget */,
+				FD42506D295530B1002FBCDE /* Frameworks */,
+				FD42503A29551D29002FBCDE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD42503A29551D29002FBCDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD42503929551D29002FBCDE /* gothportal.app */,
+				FD42504929551D2C002FBCDE /* gothportalTests.xctest */,
+				FD42505329551D2C002FBCDE /* gothportalUITests.xctest */,
+				FD42506C295530B1002FBCDE /* GothPortal WidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD42503B29551D29002FBCDE /* gothportal */ = {
+			isa = PBXGroup;
+			children = (
+				FD42503C29551D29002FBCDE /* gothportalApp.swift */,
+				FD42503E29551D29002FBCDE /* ContentView.swift */,
+				FD42504029551D2C002FBCDE /* Assets.xcassets */,
+				FD42504229551D2C002FBCDE /* Preview Content */,
+				FD425066295520A1002FBCDE /* images.swift */,
+			);
+			path = gothportal;
+			sourceTree = "<group>";
+		};
+		FD42504229551D2C002FBCDE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FD42504329551D2C002FBCDE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FD42504C29551D2C002FBCDE /* gothportalTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD42504D29551D2C002FBCDE /* gothportalTests.swift */,
+			);
+			path = gothportalTests;
+			sourceTree = "<group>";
+		};
+		FD42505629551D2C002FBCDE /* gothportalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FD42505729551D2C002FBCDE /* gothportalUITests.swift */,
+				FD42505929551D2C002FBCDE /* gothportalUITestsLaunchTests.swift */,
+			);
+			path = gothportalUITests;
+			sourceTree = "<group>";
+		};
+		FD42506D295530B1002FBCDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD42506E295530B1002FBCDE /* WidgetKit.framework */,
+				FD425070295530B1002FBCDE /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD425072295530B2002FBCDE /* GothPortal Widget */ = {
+			isa = PBXGroup;
+			children = (
+				FD425073295530B2002FBCDE /* GothPortal_WidgetBundle.swift */,
+				FD425075295530B2002FBCDE /* GothPortal_WidgetLiveActivity.swift */,
+				FD425077295530B2002FBCDE /* GothPortal_Widget.swift */,
+				FD425079295530BB002FBCDE /* Assets.xcassets */,
+				FD42507B295530BB002FBCDE /* Info.plist */,
+				FD425085295531CB002FBCDE /* gothPortalWidgetView.swift */,
+			);
+			path = "GothPortal Widget";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD42503829551D29002FBCDE /* gothportal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD42505D29551D2C002FBCDE /* Build configuration list for PBXNativeTarget "gothportal" */;
+			buildPhases = (
+				FD42503529551D29002FBCDE /* Sources */,
+				FD42503629551D29002FBCDE /* Frameworks */,
+				FD42503729551D29002FBCDE /* Resources */,
+				FD425082295530BC002FBCDE /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD42507D295530BB002FBCDE /* PBXTargetDependency */,
+			);
+			name = gothportal;
+			productName = gothportal;
+			productReference = FD42503929551D29002FBCDE /* gothportal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD42504829551D2C002FBCDE /* gothportalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD42506029551D2C002FBCDE /* Build configuration list for PBXNativeTarget "gothportalTests" */;
+			buildPhases = (
+				FD42504529551D2C002FBCDE /* Sources */,
+				FD42504629551D2C002FBCDE /* Frameworks */,
+				FD42504729551D2C002FBCDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD42504B29551D2C002FBCDE /* PBXTargetDependency */,
+			);
+			name = gothportalTests;
+			productName = gothportalTests;
+			productReference = FD42504929551D2C002FBCDE /* gothportalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD42505229551D2C002FBCDE /* gothportalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD42506329551D2C002FBCDE /* Build configuration list for PBXNativeTarget "gothportalUITests" */;
+			buildPhases = (
+				FD42504F29551D2C002FBCDE /* Sources */,
+				FD42505029551D2C002FBCDE /* Frameworks */,
+				FD42505129551D2C002FBCDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD42505529551D2C002FBCDE /* PBXTargetDependency */,
+			);
+			name = gothportalUITests;
+			productName = gothportalUITests;
+			productReference = FD42505329551D2C002FBCDE /* gothportalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		FD42506B295530B1002FBCDE /* GothPortal WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD42507F295530BC002FBCDE /* Build configuration list for PBXNativeTarget "GothPortal WidgetExtension" */;
+			buildPhases = (
+				FD425068295530B1002FBCDE /* Sources */,
+				FD425069295530B1002FBCDE /* Frameworks */,
+				FD42506A295530B1002FBCDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GothPortal WidgetExtension";
+			productName = "GothPortal WidgetExtension";
+			productReference = FD42506C295530B1002FBCDE /* GothPortal WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD42503129551D29002FBCDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					FD42503829551D29002FBCDE = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					FD42504829551D2C002FBCDE = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FD42503829551D29002FBCDE;
+					};
+					FD42505229551D2C002FBCDE = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FD42503829551D29002FBCDE;
+					};
+					FD42506B295530B1002FBCDE = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = FD42503429551D29002FBCDE /* Build configuration list for PBXProject "gothportal" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD42503029551D28002FBCDE;
+			productRefGroup = FD42503A29551D29002FBCDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD42503829551D29002FBCDE /* gothportal */,
+				FD42504829551D2C002FBCDE /* gothportalTests */,
+				FD42505229551D2C002FBCDE /* gothportalUITests */,
+				FD42506B295530B1002FBCDE /* GothPortal WidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD42503729551D29002FBCDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD42504429551D2C002FBCDE /* Preview Assets.xcassets in Resources */,
+				FD42504129551D2C002FBCDE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD42504729551D2C002FBCDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD42505129551D2C002FBCDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD42506A295530B1002FBCDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD42507A295530BB002FBCDE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD42503529551D29002FBCDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD42503F29551D29002FBCDE /* ContentView.swift in Sources */,
+				FD42503D29551D29002FBCDE /* gothportalApp.swift in Sources */,
+				FD425067295520A1002FBCDE /* images.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD42504529551D2C002FBCDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD42504E29551D2C002FBCDE /* gothportalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD42504F29551D2C002FBCDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD42505A29551D2C002FBCDE /* gothportalUITestsLaunchTests.swift in Sources */,
+				FD42505829551D2C002FBCDE /* gothportalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD425068295530B1002FBCDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD425078295530B2002FBCDE /* GothPortal_Widget.swift in Sources */,
+				FD42508429553167002FBCDE /* images.swift in Sources */,
+				FD425086295531CB002FBCDE /* gothPortalWidgetView.swift in Sources */,
+				FD425076295530B2002FBCDE /* GothPortal_WidgetLiveActivity.swift in Sources */,
+				FD425074295530B2002FBCDE /* GothPortal_WidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD42504B29551D2C002FBCDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD42503829551D29002FBCDE /* gothportal */;
+			targetProxy = FD42504A29551D2C002FBCDE /* PBXContainerItemProxy */;
+		};
+		FD42505529551D2C002FBCDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD42503829551D29002FBCDE /* gothportal */;
+			targetProxy = FD42505429551D2C002FBCDE /* PBXContainerItemProxy */;
+		};
+		FD42507D295530BB002FBCDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD42506B295530B1002FBCDE /* GothPortal WidgetExtension */;
+			targetProxy = FD42507C295530BB002FBCDE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FD42505B29551D2C002FBCDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD42505C29551D2C002FBCDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD42505E29551D2C002FBCDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"gothportal/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gothportal.gothportal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD42505F29551D2C002FBCDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"gothportal/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gothportal.gothportal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FD42506129551D2C002FBCDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gothportal.gothportalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gothportal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/gothportal";
+			};
+			name = Debug;
+		};
+		FD42506229551D2C002FBCDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gothportal.gothportalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gothportal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/gothportal";
+			};
+			name = Release;
+		};
+		FD42506429551D2C002FBCDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gothportal.gothportalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = gothportal;
+			};
+			name = Debug;
+		};
+		FD42506529551D2C002FBCDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gothportal.gothportalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = gothportal;
+			};
+			name = Release;
+		};
+		FD425080295530BC002FBCDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GothPortal Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "GothPortal Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gothportal.gothportal.GothPortal-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD425081295530BC002FBCDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GothPortal Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "GothPortal Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gothportal.gothportal.GothPortal-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD42503429551D29002FBCDE /* Build configuration list for PBXProject "gothportal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD42505B29551D2C002FBCDE /* Debug */,
+				FD42505C29551D2C002FBCDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD42505D29551D2C002FBCDE /* Build configuration list for PBXNativeTarget "gothportal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD42505E29551D2C002FBCDE /* Debug */,
+				FD42505F29551D2C002FBCDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD42506029551D2C002FBCDE /* Build configuration list for PBXNativeTarget "gothportalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD42506129551D2C002FBCDE /* Debug */,
+				FD42506229551D2C002FBCDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD42506329551D2C002FBCDE /* Build configuration list for PBXNativeTarget "gothportalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD42506429551D2C002FBCDE /* Debug */,
+				FD42506529551D2C002FBCDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD42507F295530BC002FBCDE /* Build configuration list for PBXNativeTarget "GothPortal WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD425080295530BC002FBCDE /* Debug */,
+				FD425081295530BC002FBCDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD42503129551D29002FBCDE /* Project object */;
+}
