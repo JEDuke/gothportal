@@ -8,12 +8,27 @@
     
 <script src="/lib/jquery/dist/jquery.js"></script>
 <script type="text/javascript">
-    $( document ).ready(function() {
-        setBackgroundImage();
+    $( document ).ready(function()
+    {
+        var count = 5;
+
+        // get a random number within range of number of files
+        var i = Math.floor(Math.random() * count) + 1;
+
+        // set the random starting backgound now
+        setBackgroundImage(i)
+
+        // start counter to roll the background every x ms
+        setInterval(() => {
+            i < count ? i++ : i=1;
+            setBackgroundImage(i);
+        }, 20000);
+        
     });
 
-    function setBackgroundImage(){
-        var backgroundImageUrl = '@Url.Action("Image","Home")';
+    function setBackgroundImage(x)
+    {
+        var backgroundImageUrl = '@Url.Action("Image", "Home")' + "?name=homepage" + x + ".jpeg";
         $(document.getElementById("divMainBackground")).css("background-image", "url(" + backgroundImageUrl + ")");
     }
 
