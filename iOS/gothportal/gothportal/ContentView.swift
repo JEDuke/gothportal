@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var gothImage = UIImage()
     
     var body: some View {
+        
         Image(uiImage: gothImage)
             .resizable()
             .aspectRatio(contentMode: .fill)

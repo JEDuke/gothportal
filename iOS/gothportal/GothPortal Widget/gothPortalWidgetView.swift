@@ -9,20 +9,16 @@ import Foundation
 import SwiftUI
 
 struct gothPortalWidgetView: View {
-    
-    @State var gothImage = UIImage()
-    
+
+    var gothImage = UIImage()
+
     var body: some View {
+        
         Image(uiImage: gothImage)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .edgesIgnoringSafeArea(.all)
             .onAppear() {
-                Api().loadData { (gothImage) in
-                    self.gothImage = gothImage
+                Api().loadData { (g) in
+                    gothImage = g
                 }
-            }.navigationTitle("gothportal")
-            .padding(.horizontal, 24)
+            }
     }
 }

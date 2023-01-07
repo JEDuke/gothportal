@@ -9,23 +9,28 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
+    
+    var gothImage = UIImage()
+    
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), gothImage: UIImage())
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), gothImage: UIImage())
+        let gothImage = Api().loadData()
+        let entry = SimpleEntry(date: Date(), gothImage: gothImage)
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
+        let image = Api().loadData()
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, gothImage: UIImage())
+            let entry = SimpleEntry(date: entryDate, gothImage: image )
             entries.append(entry)
         }
 
