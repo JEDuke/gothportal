@@ -1,4 +1,7 @@
-name: api - Build and deploy to Azure Function App - gothapi
+# Docs for the Azure Web Apps Deploy action: https://github.com/azure/functions-action
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: api - build and deploy Azure Function App - gothapi
 
 on:
   push:
@@ -41,4 +44,4 @@ jobs:
           app-name: 'gothapi'
           slot-name: 'Production'
           package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2C8A49E9214D444D9E2A28CAEF0690B3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9F0D6DE47D144597ACECFCC54EBACA67 }}
