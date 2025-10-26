@@ -6,9 +6,8 @@
 
 </div>
     
-<script src="/lib/jquery/dist/jquery.js"></script>
 <script type="text/javascript">
-    $( document ).ready(function()
+    $(document).ready(function()
     {
         var count = 5;
 
@@ -28,7 +27,6 @@
 
     function setBackgroundImage(x)
     {
-        //https://gothstorage.blob.core.windows.net/gothportal/homepage1.jpeg
         var backgroundImageUrl = "https://gothstorage.blob.core.windows.net/gothportal/homepage" + x + ".jpeg";
         $(document.getElementById("divMainBackground")).css("background-image", "url(" + backgroundImageUrl + ")");
     }
