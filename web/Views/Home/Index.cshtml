@@ -28,7 +28,8 @@
 
     function setBackgroundImage(x)
     {
-        var backgroundImageUrl = '@Url.Action("Image", "Home")' + "?name=homepage" + x + ".jpeg";
+        //https://gothstorage.blob.core.windows.net/gothportal/homepage1.jpeg
+        var backgroundImageUrl = "https://gothstorage.blob.core.windows.net/gothportal/homepage" + x + ".jpeg";
         $(document.getElementById("divMainBackground")).css("background-image", "url(" + backgroundImageUrl + ")");
     }
 
